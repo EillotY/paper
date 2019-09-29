@@ -1,4 +1,5 @@
-# Crowd Counting via Adversarial Cross-Scale Consistency Pursuit  IN PYTORCH (Unofficial)
+# Crowd Counting via Adversarial Cross-Scale Consistency Pursuit  IN PYTORCH
+
 
 Implementation of CVPR 2O18 paper [Crowd Counting via Adversarial Cross-Scale](http://openaccess.thecvf.com/content_cvpr_2018/papers/Shen_Crowd_Counting_via_CVPR_2018_paper.pdf)
 
@@ -80,12 +81,4 @@ python3 train.py -d ucf-cc-50 --save-dir log/multi-stream --resume log/ACSCP/ucf
 
 The testing log is stored in `log_test.txt` inside the corresponding log/fold/part directory. You can also generate the plots of the predictions using flag `--save-plots`, results are stored in the directory `plot-results-test` inside the corresponding log/fold/part directory.
 
-## 5. Final notes / TODO:
-
-* Results for UCF_CC_50 with this code are MAE 281,73 MSE 415,56 (--people-thr 20). Reported results by the authors are MAE 291.0 MSE 404.6.
-* Validation for other dataset may be done in the future.
-* Batch normalization is not used because of inestable learning.
-* Ground thruth is generated using a gaussian of fixed size.
-* Number of channels of autoencoder in the middle layer is changed to 3, instead of 4.
-* Network receives images of 1 channel, instead of 3.
-* You can use the flag `--overlap-test` to overlap the sliding windows used for testing (as implemented by the authors).
+.
